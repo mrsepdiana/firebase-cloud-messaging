@@ -1,0 +1,20 @@
+HTTP POST REQUEST
+Authorization: key=<your-server-key>
+Content-Type: application/json
+{
+ "to" : "<your-token>",
+ "data" : {
+ 	"title": "Title Notification",
+ 	"body" : "Body Notification"
+ }
+}
+
+
+#Example
+{
+ "to" : "d5odv14KHGg:APA91bG1mQ05mmND_s86_2GezuS44SGMoE1EzBs_CdG8giWBSYpDwFMU4NralZHyzzt8aTxRwsjeqLFdE4vwm7yJyRec8gXixNja8jLS2CP-vBSfc_wuLqKYrf1lrHa3LGUtZOlFLhMr",
+ "data" : {
+ 	"title": "Title Notification",
+ 	"body" : "Body Notification"
+ }
+}
