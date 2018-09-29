@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Announcement</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Firebase Cloud Messaging</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul> -->
+  </div>
+</nav>
+
+	<div class="row d-flex justify-content-center mt-5">
+		<div class="col-md-4">
+			<form method="POST" action="../notification.php">
+				<div class="form-group">
+					<label for="formChannel">To Channel:</label>
+					<input type="text" name="channel" class="form-control form-control-sm" id="formChannel" value="persib">
+					<small id="emailHelp" class="form-text text-muted">For this example: persib.</small>
+
+				</div>
+				<div class="form-group">
+					<label for="formTitle">Title:</label>
+					<input type="text" name="title" class="form-control form-control-sm" id="formTitle">
+				</div>
+				<div class="form-group">
+					<label for="formMessage">Message:</label>
+					<textarea rows="5" cols="10" name="message" class="form-control form-control-sm" id="formMessage"></textarea>
+				</div>
+
+				<button type="submit" class="btn btn-primary btn-sm">Send Broadcast</button>
+			</form>			
+		</div>
+	</div>
+
+</body>
+</html>
