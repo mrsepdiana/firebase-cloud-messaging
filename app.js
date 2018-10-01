@@ -94,9 +94,10 @@ navigator.serviceWorker.register('http://localhost/firebase-messaging-sw.js') //
 	messaging.onMessage(function(payLoad) {
 	    console.log('OnMessage', payLoad);
 	    // Showing notification data form payLoad
-	    const title = payLoad.data.title;
+	    const title = payLoad.notification.title;
 	    const options = {
-	      body: payLoad.data.body
+	      body: payLoad.notification.body,
+	      click_action: payLoad.notification.click_action
 	    }
 	    // Show Notification
 	    registration.showNotification(title, options);

@@ -6,9 +6,10 @@ if(!empty($_POST['channel']) && !empty($_POST['message']) && !empty($_POST['titl
 
 	$url = "https://fcm.googleapis.com/fcm/send";
 	$data = [
-		'data' => [
+		'notification' => [
 			'title' => $title,
-			'body' => $message
+			'body' => $message,
+			"click_action" => "http://localhost/firebase-cloud-messaging/"
 		],
 		'to' => '/topics/' . $channel
 	];
@@ -27,7 +28,7 @@ if(!empty($_POST['channel']) && !empty($_POST['message']) && !empty($_POST['titl
 	$context = stream_context_create($options);
 	$result = file_get_contents($url, false, $context);
 
-	header('location: http://localhost/firebase/form/announcement.html');
+	header('location: http://localhost/firebase-cloud-messaging/form/announcement.html');
 
 } else {
 	$title = null;
