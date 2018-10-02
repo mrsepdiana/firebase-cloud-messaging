@@ -13,7 +13,7 @@ const messaging = firebase.messaging();
 // this get user's subsribe from ID channel on HTML tag.
 var userChannel = document.getElementById("channel").innerHTML;
 
-navigator.serviceWorker.register('http://localhost/firebase-messaging-sw.js') // register firebase service worker 
+navigator.serviceWorker.register('https://localhost/firebase-messaging-sw.js') // register firebase service worker 
 .then((registration) => {
 	messaging.useServiceWorker(registration);
 
@@ -94,13 +94,13 @@ navigator.serviceWorker.register('http://localhost/firebase-messaging-sw.js') //
 	messaging.onMessage(function(payLoad) {
 	    console.log('OnMessage', payLoad);
 	    // Showing notification data form payLoad
-	    const title = payLoad.notification.title;
-	    const options = {
-	      body: payLoad.notification.body,
-	      click_action: payLoad.notification.click_action
-	    }
-	    // Show Notification
-	    registration.showNotification(title, options);
+	    // const title = payLoad.notification.title;
+	    // const options = {
+	    //   body: payLoad.notification.body,
+	    //   click_action: payLoad.notification.click_action
+	    // }
+	    // // Show Notification
+	    // registration.showNotification(title, options);
 	});
 
 	// subsribe user's token to some topic.
