@@ -9,7 +9,7 @@ if(!empty($_POST['channel']) && !empty($_POST['message']) && !empty($_POST['titl
 		'notification' => [
 			'title' => $title,
 			'body' => $message,
-			"click_action" => "http://localhost/firebase-cloud-messaging/"
+			"click_action" => "https://localhost/firebase-cloud-messaging/"
 		],
 		'to' => '/topics/' . $channel
 	];
