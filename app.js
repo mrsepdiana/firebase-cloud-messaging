@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-	apiKey: "AIzaSyA0wpXiVL4wOROPVo-zv8xvmx4qSXOGg50",
-    authDomain: "buziness-46ae2.firebaseapp.com",
-    databaseURL: "https://buziness-46ae2.firebaseio.com",
-    projectId: "buziness-46ae2",
-    storageBucket: "buziness-46ae2.appspot.com",
-    messagingSenderId: "737555594069"
+	apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_FIREBASE_DOMAIN",
+    databaseURL: "YOUR_FIREBASE_DB_DOMAIN",
+    projectId: "YOUR_FIREBASE_PROJECT_ID",
+    storageBucket: "YOUR_FIREBASE_STORAGE_BUCKET",
+    messagingSenderId: "MESSAGING_SENDER_ID"
 };
 firebase.initializeApp(config);
 
